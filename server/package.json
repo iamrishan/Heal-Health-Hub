@@ -1,0 +1,26 @@
+{
+  "name": "discorderz-h3",
+  "version": "1.0.0",
+  "description": "Heal Health Hub (H3) is a web application built on Node.js, designed to serve as a centralized platform to address critical needs within the healthcare sector. The primary focus of H3 is to facilitate the process of blood donation and streamline the procurement of essential items for hospitals at the lowest cost or for free.",
+  "main": "index.js",
+  "engines": {
+    "node": "18.x"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Discorderz",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.2.0",
+    "multer": "^1.4.2",
+    "multer-gridfs-storage": "^5.0.2",
+    "nodemon": "^3.1.0"
+  },
+  "keywords": []
+}

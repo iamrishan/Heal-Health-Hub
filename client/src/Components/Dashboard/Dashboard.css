@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  background-color: #f5f6fa;
+  height: 100vh;
+}
+
+.custom-card {
+  background-color: #fff;
+  border: none !important;
+  border-radius: 16px;
+  box-shadow: 0px 0px 20px gainsboro;
+  margin: 10px;
+  width: 250px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.custom-card:hover {
+  transform: scale(1.05);
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.icon {
+  font-size: 2em;
+}
+
+.search-boxes {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1rem 5rem;
+  margin: 1rem;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: 4rem;
+  font-size: 24px;
+}
+
+.search-box {
+  border: none !important;
+}
+
+select {
+  border: none !important;
+}
+
+.search {
+  color: grey;
+}
+
+option {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem;
+}

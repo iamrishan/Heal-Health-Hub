@@ -1,0 +1,74 @@
+/* Requests.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  width: 800px;
+  margin: 10px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px gainsboro;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.heading {
+  width: 790px;
+  display: flex;
+  text-align: start;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 1rem;
+}
+.wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.name {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 160px;
+}
+
+.accept,
+.reject {
+  padding: 8px;
+  margin: 2px;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  font-size: 1em;
+  outline: none;
+}
+
+.accept {
+  background-color: #f44336;
+  color: white;
+}
+
+.reject {
+  background-color: #1c1c1c;
+  color: white;
+}
+.view {
+  color: #f44336;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration-line: underline !important;
+}

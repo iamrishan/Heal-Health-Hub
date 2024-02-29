@@ -1,0 +1,54 @@
+.navbar {
+  width: 100%;
+  max-width: 100%;
+  height: 78px;
+  background-color: #202020;
+}
+
+.welcome-message{
+  font-weight: 600;
+  color: #fff;
+  font-size: 2rem;
+  margin-right: 50px;
+}
+.navbar .nav-container {
+  display: flex;
+  max-width: 80%;
+  margin-inline: auto;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.navbar .nav-container .logo-container,
+.navbar .nav-container .logo-container img {
+  height: 48px;
+  display: flex;
+  gap: 1rem;
+}
+.navbar .nav-container .logo-container img {
+  z-index: 20;
+}
+.navbar .nav-link-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .nav-link-container .nav-links,
+.navbar .nav-link-container .nav-links > * {
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0.5rem;
+  font-weight: 400;
+  color: hsl(342.86 100% 98.63%);
+  font-size: 1rem;
+  padding: 8px 24px;
+}
+.navbar .nav-link-container .nav-links:hover {
+  background-color: #ff004c;
+  border-radius: 8px;
+}
+.navbar .nav-link-container .brand-name a {
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: white;
+}

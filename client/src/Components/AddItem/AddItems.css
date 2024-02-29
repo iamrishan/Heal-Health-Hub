@@ -1,0 +1,178 @@
+.agreetext {
+  font-size: 14px !important;
+}
+
+
+.add-items {
+  width: 100%;
+  min-height: 100dvh;
+  background-color: #f5f6fa;
+}
+.add-items .add-items-container {
+  margin-top: 3rem;
+  border-radius: 12px;
+  max-width: 90%;
+  width: 700px;
+  box-shadow: 0px 0px 20px gainsboro;
+  margin-inline: auto;
+  background-color: #fff;
+
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.add-items form {
+  width: 100%;
+}
+.add-items .form-header {
+  text-align: start;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.add-items .form-header h3 {
+  color: #131523;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.6rem;
+}
+.add-items .form-header h5 {
+  color: #5a607f;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.add-items .link {
+  color: #ff004d;
+}
+.add-items form-group {
+  width: 100%;
+  margin-block: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.add-items form-group label {
+  font-size: 0.95rem;
+  color: #1c1c1c;
+
+  line-height: 1.8;
+}
+.add-items form-group input {
+  padding-inline: 12px;
+  width: 100%;
+  font-weight: normal;
+  border: 1px solid #a8a8a8;
+  border-radius: 8px;
+}
+.add-items .t-and-c {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 0.9rem;
+}
+.add-items .t-and-c form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  width: auto;
+}
+.register .t-and-c label {
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1c1c1c;
+  font-size: 0.85rem;
+}
+.add-items .t-and-c form-group input {
+  width: auto;
+  font-size: 1.2rem;
+}
+.add-items .t-and-c a {
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.add-items button {
+  outline: none;
+  border: none;
+  width: 100%;
+  text-align: center;
+  padding-block: 1px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.submit {
+  color: #fff;
+  background-color: #ff004c;
+}
+
+
+
+.register .add-items-container {
+  margin-top: 3rem;
+}
+.register .usertype {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.register .active {
+  color: #fff;
+  background-color: #ff004c;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  max-width: 600px;
+  max-height: 600px;
+  overflow: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+.agreetext {
+  font-size: 14px !important;
+}
+
+.text {
+  text-align: left;
+  display: flex;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.textb {
+  font-weight: 500;
+  text-align: left;
+  display: flex;
+  font-size: 13px;
+  line-height: 20px;
+}

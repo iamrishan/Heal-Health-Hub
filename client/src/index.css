@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+    /* fonts */
+    --font-poppins: Poppins;
+  
+    /* font sizes */
+    --font-size-5xl: 24px;
+  
+    /* Colors */
+    --color-crimson: #ff004c;
+    --color-white: #fff;
+    --color-gray: #202020;
+    --color-snow: #fff8fa;
+  
+    /* Gaps */
+    --gap-139xl: 158px;
+    --gap-0: 0px;
+  
+    /* Paddings */
+    --padding-xl: 20px;
+    --padding-sm: 14px;
+    --padding-30xl: 49px;
+  
+    /* Border radiuses */
+    --br-2xl: 21px;
+    --font-poppins: Poppins;
+    --font-inter: Inter;
+  
+    /* font sizes */
+    --font-size-5xl: 24px;
+    --font-size-lgi: 19px;
+    --font-size-15xl-4: 34.4px;
+    --font-size-base: 16px;
+    --font-size-sm: 14px;
+  
+    /* Colors */
+    --color-ghostwhite: #f5f6fa;
+    --color-crimson-100: #ff004d;
+    --color-crimson-200: #ff004c;
+    --color-white: #fff;
+    --color-gray-100: #202020;
+    --color-snow: #fff8fa;
+    --color-slategray: #5a607f;
+    --color-lightsteelblue: #a1a7c4;
+    --color-lavender: #d9e1ec;
+  
+    /* Gaps */
+    --gap-139xl: 158px;
+    --gap-0: 0px;
+    --gap-base: 16px;
+    --gap-xl: 20px;
+    --gap-166xl: 185px;
+    --gap-21xl: 40px;
+  
+    /* Paddings */
+    --padding-xl: 20px;
+    --padding-sm: 14px;
+    --padding-18xl: 37px;
+    --padding-79xl: 98px;
+    --padding-19xl: 38px;
+    --padding-30xl: 49px;
+    --padding-29xl: 48px;
+    --padding-xs: 12px;
+    --padding-base: 16px;
+  
+    /* Border radiuses */
+    --br-2xl: 21px;
+    --br-8xl-9: 27.9px;
+    --br-xl: 20px;
+    --br-xs: 12px;
+    --br-9xs: 4px;
+  }
+  
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul, ol, 
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body{
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+  /* width: 100%; */
+}
+
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
