@@ -176,3 +176,10 @@
   font-size: 13px;
   line-height: 20px;
 }
+
+
+.toast {
+  padding: 20px !important;
+  text-align: start;
+  font-size: 14px;
+}

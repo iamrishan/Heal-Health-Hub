@@ -3,6 +3,12 @@
   min-height: 100dvh;
   background-color: #f5f6fa;
 }
+
+.toast {
+  padding: 20px !important;
+  text-align: start;
+  font-size: 14px;
+}
 .login .login-container {
   margin-top: 3rem;
   border-radius: 12px;
@@ -102,5 +108,3 @@
   color: #fff;
   background-color: #ff004c;
 }
-
-

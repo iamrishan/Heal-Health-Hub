@@ -1,24 +1,26 @@
 import React, { useState } from "react";
 import "./Login.css";
 import { useNavigate } from "react-router-dom";
-import { Toaster, toast } from "sonner";
+import toast, { Toaster } from "react-hot-toast";
+import { SyncLoader } from "react-spinners";
 
 const Login = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
   const [, setFormError] = useState(null);
-
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
 
     if (!email || !password) {
-      setFormError("Please enter both email and password.");
-      toast.error("Please enter both email and password.");
+      setFormError("Please enter email and password.");
+      toast.error("Please enter email and password.");
       return;
     } else {
       try {
+        setLoading(true);
         const response = await fetch("https://h3-server.vercel.app/login", {
           method: "POST",
           headers: {
@@ -29,14 +31,37 @@ const Login = (props) => {
 
         if (response.ok) {
           const data = await response.json();
-          const { token, role } = data;
+          const role = data.role;
 
-          localStorage.setItem("token", token);
+          localStorage.setItem("token", data.token);
           localStorage.setItem("role", role);
 
-          toast.success("Login Successful!");
-          props.setIsLoggedIn(true)
-          navigate("/dashboard");
+          await toast.promise(Promise.resolve("Login Successful!"), {
+            loading: "Logging in...",
+            success: "Login Successful!",
+            error: "Unexpected error occurred",
+          });
+
+          setTimeout(() => {
+            console.log("Role:", role);
+            navigate("/dashboard");
+          }, 1000);
+
+          // setTimeout(() => {
+          //   console.log("Role:", role);
+          //   if (role == "giver") {
+          //     props.setIsLoggedIn(true);
+          //     navigate("/give");
+          //   } else if (role == "needer") {
+          //     props.setIsLoggedIn(true);
+          //     navigate("/dashboard");
+          //   } else if (role == "admin") {
+          //     props.setIsLoggedIn(true);
+          //     navigate("/request");
+          //   } else {
+          //     console.error("Unknown role:", role);
+          //   }
+          // }, 1000);
         } else {
           const errorData = await response.json();
 
@@ -53,6 +78,8 @@ const Login = (props) => {
         }
       } catch (error) {
         console.error("An error occurred during login:", error);
+      } finally {
+        setLoading(false);
       }
     }
   };
@@ -89,12 +116,24 @@ const Login = (props) => {
             />
           </form-group>
           <div className="t-and-c"></div>
-          <button type="submit" className="submit">
-            Login
+          <button type="submit" className="submit" disabled={loading}>
+            {loading ? (
+              <SyncLoader loading={true} color="#ffffff" size={10} margin={2} />
+            ) : (
+              "Login"
+            )}
           </button>
         </form>
       </div>
-      <Toaster position="top-right" />
+      <Toaster
+        position="top-right"
+        reverseOrder={true}
+        toastOptions={{
+          // Define default options
+          className: "toast",
+          duration: 2000,
+        }}
+      />
     </div>
   );
 };

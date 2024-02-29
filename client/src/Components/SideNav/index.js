@@ -47,6 +47,7 @@ const SideNav = (props) => {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
+    localStorage.removeItem("role");
     props.setIsLoggedIn(false);
     setUsername("");
     navigate("/login");

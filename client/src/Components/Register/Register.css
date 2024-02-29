@@ -44,8 +44,16 @@
   color: #333;
 }
 
+.toast {
+  padding: 20px !important;
+  text-align: start;
+  font-size: 14px;
+}
+
 .agreetext {
-  font-size: 10px !important;
+  padding: 0px;
+  font-size: 13px !important;
+  text-align: start;
 }
 
 .text {

@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import "./Register.css";
-import { Toaster, toast } from "sonner";
+import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { SyncLoader } from "react-spinners";
 
 const Register = () => {
   const [userType, setUserType] = useState(false);
   const [isPopupOpen, setPopupOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+
   const [file, setFile] = useState(false);
-
-
 
   const openPopup = () => {
     setPopupOpen(true);
@@ -32,7 +33,6 @@ const Register = () => {
       !password.value ||
       !agree.checked
     ) {
-
       toast.error("Please fill out all required fields.");
       return;
     } else {
@@ -52,6 +52,8 @@ const Register = () => {
       });
 
       try {
+        setLoading(true);
+
         const response = await fetch("https://h3-server.vercel.app/register", {
           method: "POST",
           headers: {
@@ -61,8 +63,13 @@ const Register = () => {
         });
 
         if (response.ok) {
-          toast.success("Registered successfully!");
-          navigate("/login");
+          userType
+            ? toast.loading("Waiting for Admin's Approval!")
+            : toast.success("Registered successfully!");
+
+          setTimeout(() => {
+            navigate("/login");
+          }, 1000);
 
           // Add any additional logic or redirection after successful registration
         } else if (response.status === 400) {
@@ -72,6 +79,8 @@ const Register = () => {
         }
       } catch (error) {
         console.error("Error during registration", error);
+      } finally {
+        setLoading(false);
       }
     }
   };
@@ -239,12 +248,25 @@ const Register = () => {
               </label>
             </form-group>
           </div>
-          <button className="submit" type="submit">
-            {userType ? "Request for Verification" : "Create Account"}
+          <button className="submit" type="submit" disabled={loading}>
+            {loading ? (
+              <SyncLoader loading={true} color="#ffffff" size={10} margin={2} />
+            ) : userType ? (
+              "Request for Verification"
+            ) : (
+              "Create Account"
+            )}
           </button>
         </form>
       </div>
-      <Toaster position="top-right" duration={2000} />
+      <Toaster
+        position="top-right"
+        reverseOrder={true}
+        toastOptions={{
+          className: "toast",
+          duration: 2000,
+        }}
+      />
     </div>
   );
 };

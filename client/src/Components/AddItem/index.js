@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./AddItems.css";
-import { Toaster, toast } from "sonner";
+import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
 const AddItems = () => {
@@ -142,7 +142,14 @@ const AddItems = () => {
           </button>
         </form>
       </div>
-      <Toaster position="top-right" duration={2000} />
+      <Toaster
+        position="top-right"
+        reverseOrder={true}
+        toastOptions={{
+          className: "toast",
+          duration: 2000,
+        }}
+      />
     </div>
   );
 };
