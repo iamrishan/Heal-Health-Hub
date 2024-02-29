@@ -7,7 +7,6 @@ import Login from "./Components/Login";
 import Register from "./Components/Register";
 import SideNav from "./Components/SideNav";
 import Dashboard from "./Components/Dashboard";
-import Users from "./Components/Users";
 import Requests from "./Components/Requests";
 import AddItems from "./Components/AddItem";
 
@@ -50,14 +49,14 @@ function App() {
               path="requests"
               element={<Requests changePath={changePath} />}
             />
-            <Route path="users" element={<Users changePath={changePath} />} />
+
           </Route>
           <Route
             path="/admin/dashboard/*"
             element={<SideNav path={path} changePath={changePath} />}
           >
             <Route index element={<Dashboard changePath={changePath} />} />
-            <Route path="users" element={<Users changePath={changePath} />} />
+
             <Route
               path="requests"
               element={<Requests changePath={changePath} />}

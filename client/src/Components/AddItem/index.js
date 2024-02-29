@@ -30,7 +30,7 @@ const AddItems = () => {
     };
 
     try {
-      const response = await fetch("https://h3-server.vercel.app/additem", {
+      const response = await fetch("https://heal-health-hub-server.vercel.app/additem", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

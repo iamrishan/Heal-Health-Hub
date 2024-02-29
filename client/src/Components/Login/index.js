@@ -21,7 +21,7 @@ const Login = (props) => {
     } else {
       try {
         setLoading(true);
-        const response = await fetch("https://h3-server.vercel.app/login", {
+        const response = await fetch("https://heal-health-hub-server.vercel.app/login", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -43,7 +43,6 @@ const Login = (props) => {
           });
 
           setTimeout(() => {
-            console.log("Role:", role);
             navigate("/dashboard");
           }, 1000);
 

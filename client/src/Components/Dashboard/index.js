@@ -17,7 +17,7 @@ const Dashboard = ({ changePath }) => {
     const fetchData = async () => {
       try {
         // Fetch items data
-        const responseItems = await fetch("https://h3-server.vercel.app/getitems");
+        const responseItems = await fetch("https://heal-health-hub-server.vercel.app/getitems");
         if (responseItems.ok) {
           const itemsData = await responseItems.json();
 

@@ -54,7 +54,7 @@ const Register = () => {
       try {
         setLoading(true);
 
-        const response = await fetch("https://h3-server.vercel.app/register", {
+        const response = await fetch("https://heal-health-hub-server.vercel.app/register", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

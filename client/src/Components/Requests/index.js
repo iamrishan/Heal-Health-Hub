@@ -18,7 +18,9 @@ const Requests = ({ changePath }) => {
 
   const fetchUnverifiedNeeders = async () => {
     try {
-      const response = await fetch("https://h3-server.vercel.app/getunverifiedneeder");
+      const response = await fetch(
+        "https://heal-health-hub-server.vercel.app/getunverifiedneeder"
+      );
       const data = await response.json();
 
       // Update state with the fetched unverified needers
@@ -31,9 +33,12 @@ const Requests = ({ changePath }) => {
   const handleAccept = async (neederId) => {
     try {
       // Make API request to update the user status to verified
-      await fetch(`https://h3-server.vercel.app/acceptneeder/${neederId}`, {
-        method: "PUT",
-      });
+      await fetch(
+        `https://heal-health-hub-server.vercel.app/acceptneeder/${neederId}`,
+        {
+          method: "PUT",
+        }
+      );
 
       toast.success("Accepeted Successfully!");
       // Fetch updated unverified needers after acceptance
@@ -46,9 +51,12 @@ const Requests = ({ changePath }) => {
   const handleReject = async (neederId) => {
     try {
       // Make API request to delete the user
-      await fetch(`https://h3-server.vercel.app/rejectneeder/${neederId}`, {
-        method: "DELETE",
-      });
+      await fetch(
+        `https://heal-health-hub-server.vercel.app/rejectneeder/${neederId}`,
+        {
+          method: "DELETE",
+        }
+      );
       toast.success("Rejected Successfully!");
       // Fetch updated unverified needers after rejection
       fetchUnverifiedNeeders();
