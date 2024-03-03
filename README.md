@@ -11,12 +11,12 @@ https://heal-health-hub-client.vercel.app/
 
 Admin:\
 admin@admin .com\
-admin123\\
+admin123\
 
 Test User (Giver):\
 abc@abc .com\
-123456\\
+123456\
 
 Test User (Needer):\
 ngo@gmail .com\
-123456\\
+123456\
