@@ -5,3 +5,18 @@
 
 Demo:
 https://vimeo.com/manage/videos/917577331
+
+Live:
+https://heal-health-hub-client.vercel.app/
+
+Admin:
+admin@admin.com
+admin123
+
+Test User (Giver):
+abc@abc.com
+123456
+
+Test User (Needer):
+ngo@gmail.com
+123456
